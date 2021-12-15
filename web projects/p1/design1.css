@@ -1,0 +1,200 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    color1:navy;
+    color2: rgb(0, 151, 20);
+    color3:rgb(211, 195, 48);
+}
+.navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 5;
+    
+    box-shadow: 10px 5px 2px grey;
+}
+.navbaritems{
+    display: flex;
+    list-style: none;
+    background-color: rgb(230 167 167);
+    color:navy;
+}
+.navbaritem{
+    padding: 4vh 5vw 4vh 5vw;
+    font-size: 28px;
+}
+.navlogo{
+    flex-basis: 30vw; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    
+}
+.container1{
+    width: 100%;
+    height: 80vh;
+    background-image: url("https://source.unsplash.com/1600x900/?blue");
+    background-color:color1;
+    color: rgb(255, 255, 255);
+    padding: 10vh 10vw;
+}
+
+.part1{
+    /* background-color: rgb(92, 91, 90); */
+    padding: 3vh 5vw;
+}
+.part1::before{
+    content: " This is Jessicaa";
+    background-color: rgb(20, 19, 97);
+    background-image: url('/p1/ionut-comanici-RDcEWH5hSDE-unsplash.jpg');
+    display: block;
+    height: 10vh;
+    background-position: 110% 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 0vh;
+    font-size: 100px;
+    text-align:center;
+    padding:40vh 0vh 40vh 0vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    opacity: 10;
+    color:lightblue;
+}
+
+.insidep1{
+    /* background-color: rgb(66, 80, 85); */
+    height:80vh ;
+    display: flex;
+    justify-content: space-between;
+    width: 65vw;
+    opacity: .6;
+    color: rgb(25, 114, 7);
+}
+
+.leftofp1{
+    
+}
+.leftofp1 h2{
+    font-size: 60px;
+    margin-top: 4vh;
+}
+.leftofp1 p{
+    font-size: 20px;
+    margin-top: .7vh;
+}
+
+.logos{
+    list-style: none;
+    display: flex;
+}
+.logo{
+    padding: 10vh 1vw 2vh 1vw;
+    
+}
+
+.rightpartofp1{
+
+}
+
+.right{
+    list-style: none;
+    margin-top: 4vh;
+}
+
+.item{
+    padding: 3vh 1vw 3vh 0vw;
+    font-size: 22px;
+}
+
+.footer{
+    background-color: navy;
+    padding: 0vh 0;
+    margin-top: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer>h2{
+    font-size: 35px;
+    color: rgb(212, 255, 212);
+    padding-left: 10vw;
+}
+
+.insidefooter{
+    /* background-color: gold; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 35vh;
+}
+.footer::before{
+    width: 100%;
+    content: " This is before";
+    background-color: navajowhite;
+    color: navy;
+    display: block;
+    height: 22vh;
+    padding-top: 5vh;
+    z-index: 5;
+    margin-bottom: 10vh;
+    font-size: 210px;
+    text-align: center;
+    
+}
+.leftoffooter{
+    display: flex;
+}
+
+.footercolumn{
+    /* border: 2px solid red; */
+    margin: 5vh 4vw 5vh 4vw;
+}
+.footercolumn li{
+    padding: 10px;
+    font-size: 16px;
+    color: rgb(246, 252, 246);
+}
+.rightoffooter{
+    display: flex;
+    flex-direction: column;
+}
+.rightoffooter ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 5vh 0vw 3vh 0vw;
+    justify-content: space-around;
+}
+.rightoffooter ul li{
+   font-size: 30px;
+   color: white;
+}
+.rightoffooter h2{
+    color: rgb(253, 255, 253);
+    text-align: center;
+    font-size: 35px;
+}
+.rightoffooter input{
+    height: 33px;
+    background:white;
+    color: green;
+    font-size: 17px;
+    border-radius: 12px;
+    margin: 1vh 0vw;
+    text-align: center;
+}
+.rightoffooter submit{
+    height: 10vh;
+    border-radius: 30px;
+    color: rgb(245, 255, 245);
+    background: bottom;
+    cursor: pointer;
+}
+button{
+    border-radius: 20px;
+}
+input{
+  
+}

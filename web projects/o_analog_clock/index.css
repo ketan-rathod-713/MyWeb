@@ -1,0 +1,49 @@
+#clockcontainer{
+    height: 500px;
+    width: 500px;
+    background-image: url('/html/projects30/analog_clock/clock.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: auto;
+    border: 2px solid red;
+    position: relative;  
+    box-shadow: 10px 10px 10px 5px grey;
+    /* // relative ke andar absolute so that absolute vale apne parent ke sath match ho */
+}
+body{
+    background-color: antiquewhite;
+}
+
+#hour , #minute ,#second{
+    background-color: black;
+    /* transform: rotate(90deg); */
+    position: absolute;
+    left: 47.2%;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+#hour{
+    width: 1.7%;
+    height: 74px;
+    top: 35.2%;
+    left: 49.8%;
+    opacity: 1;
+   
+}
+#minute{
+    width: 1%;
+    height: 140px;
+    top: 22.3%;
+    left: 49.9%;
+    opacity: 1;
+ 
+}
+
+#second{
+    width: 1%;
+    height: 155px;
+    top: 19.5%;
+    left: 49.9%;
+    opacity: 1;
+    transition: all 1s step-start step-end ease-in-out;
+}

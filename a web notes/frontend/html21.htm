@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> css transition </title>
+    <style>
+#box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* differnce betwnen different align stuff align content and all that  */
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    transition: background-color;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.2s;
+
+    /* transition: background-color transition-duration timing-function delay; */
+    /* transition: background-color 1s ease-in .3s; not working */
+/* colors, height ,width ,opacity ,fontsize ko transition kar sakate he */
+   transition: all 2s ease-in-out .2s;
+}
+
+#box:hover{
+    background-color: antiquewhite;
+    height: 400px;
+    width: 300px;
+    border-radius: 100px;
+    font-size: 30px;
+}
+    </style>
+</head>
+<body>
+    <h3>THis is css tramnsition </h3>
+    <div class="container">
+        <div id="box">
+this is my box
+        </div>
+    </div>
+</body>
+</html>

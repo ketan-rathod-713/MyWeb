@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARROW FUNCTIONS</title>
+
+</head>
+<body>
+    <div class="container">
+        This is arrow function tutorial
+    </div>
+
+    <script>
+     //arroe function
+        // greet =()=>{  
+        //     console.log('good morning');
+        // }
+
+
+        // // function greet(){
+        // //     console.log('good morning');
+        // // }
+        // greet();
+
+//         setTimeout(() => {
+//             console.log('we are inside set time out ');}
+// , 3000);
+
+// let sum=(a,b)=>{
+//     return a+b;
+// }
+
+//we can write it in this way 
+
+// let sum2 = (a,b)=>a+b; //shortcut ka bhi shortcut
+
+// let half= a => a/2; // here no bracket req, as only one argument 
+
+// if no return value then 
+
+// let greet =() => console.log("we are in arroe function"); //why
+
+let obj1={
+    greeting : "good morning";
+    names:["harry","rohan","skillf","rohan"],
+    speak(){
+        this.names.forEach((student)=>{    // here this is this object , lexical this , if arrow function used then this is of parent , if asli funnction then "this " will be of its own function
+          console.log("kukdo ku" + student);
+        });
+    }
+}
+obj1.speak();
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* select input jiska type text he  */
+        /* we can set specific atttributes by this */
+     input[type='text']{
+         padding: 23px;
+         border: 2px solid red;
+     }
+/* will select third one in the html li tag or child */
+     li:nth-child(3){
+         color: cyan;
+     }
+/* to select har dusra element */
+/* first run for n==0 and then n==1 and so on */
+     li:nth-child(2n){
+         background-color: pink;
+     }
+ 
+     li:nth-child(odd){
+         background-color: yellow;
+     }
+     li:nth-child(even){
+         background-color: lightcoral;
+     }
+     a[target]{
+         color: violet;
+     }
+     a[target='_self']{
+         color: white;
+         background-color: red;
+     }
+      .container{
+        width: 233px;
+    display: block;
+    margin: auto;
+      }
+        input{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><a href="http://google.com" target="_blank">this is anchor tag with target set for new tab </a></h1>
+        <h1><a href="http://facebook.com" target="_self">this is anchor tag with target set for new tab go to facebook </a></h1>
+        <form action="" class="form">
+            <input type="text" placeholder="enter your name">
+            <input type="password" placeholder="enter passwored">
+            <input type="submit" value="submit">
+        </form>
+        <ul>
+            <li class="item" id="item1">item1</li>
+            <li class="item" id="item2">item2</li>
+            <li class="item" id="item3">item3</li>
+            <li class="item" id="item4">item4</li>
+            <li class="item" id="item5">item5</li>
+        </ul>
+    </div>
+</body>
+</html>

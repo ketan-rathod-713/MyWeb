@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css grid</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 75%;
+    margin: 50px auto;
+    border: 2px solid grey;
+    display: grid;
+    grid-template-rows: 60px 100px 200px 60px;
+    grid-template-columns: repeat(3,1fr) 150px;
+    grid-gap: 10px;
+}
+.div1{
+    background-color: red;
+    grid-column: 1/-1; 
+    /* first se last tak */
+}
+.div2{
+    background-color: green;
+}
+
+.div6{
+    background-color: grey;
+    grid-column: 1/span 3;
+    /* also we can write 1/4 */
+}
+
+.div7{
+    background-color: yellow;
+    grid-column: 1/-1;
+}
+.div5{
+    background-color: orange;
+    grid-row: 2/span 2;
+    grid-column: 4/span 1;
+}
+.div3{
+    background-color: aqua;
+}
+.div4{
+    background-color: blue;
+}
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="div1"> header  </div>
+  <div class="div2"> box1 </div>
+  <div class="div3"> box2 </div>
+  <div class="div4"> box3 </div>
+  <div class="div5"> sidebar </div>
+  <div class="div6"> main content DONATION FOR SUPPORT:    PhonePay = vinodbahadur@ybl      GooglePay: vbthapa55@oksbi Believe me all this money will be used to make more quality videos and to make my channel grow. So that I can always provide you awesome free videos :)
+ </div>
+  <div class="div7">footer</div>
+    </main>
+</body>
+</html>

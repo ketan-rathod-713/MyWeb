@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before and afyer pseudo selectoes</title>
+</head>
+<style>
+body{
+    
+    /* many things to learn like bac image and all  */
+    color: rgb(61, 29, 29);
+    margin: 0px;
+    padding: 0px;
+    /* background-image: url('https://source.unsplash.com/user/jackie/likes/1600x900') no-repeat center center/cover; */
+    /* background-image: url('/img_for_use/christopher-campbell-kFCdfLbu6zA-unsplash.jpg'); */
+    background-repeat:no-repeat;
+    background-size: 100%;
+}
+section{
+    height: 344px;
+    border: 2px solid red;
+    margin: 3px 23px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+}
+/* before pseudo selector */
+
+header::before{
+    content: "";
+    background-image: url('/img_for_use/christopher-campbell-kFCdfLbu6zA-unsplash.jpg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+section::before{
+    content: "this is a content";
+}
+.navigation{
+    display: flex;
+    font-size: 20px;
+}
+li{
+    list-style: none;
+    padding: 34px 23px;
+}
+.header{
+    display: flex;
+    flex-direction:column ;
+}
+h1{
+    font-size: 4rem;
+}
+p{
+    text-align: center;
+}
+</style>
+<body>
+    <header>
+      <nav class="navbar">
+        <ul class="navigation">
+            <li class="item">Home</li>
+            <li class="item">services</li>
+            <li class="item">about</li>
+            <li class="item">contact is</li>
+        </ul>
+      </nav>
+
+    </header>
+    <section>
+        <h1>Welcome to coding world</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex voluptas quibusdam fugiat tempora odit temporibus voluptate quod enim voluptates sed illo minus, excepturi dicta iure corrupti molestias, recusandae nulla. Officia est voluptates libero ut!</p>
+    </section>
+    <hr>
+    <!-- for line -->
+
+</body>
+</html>

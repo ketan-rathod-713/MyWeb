@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math object in javascript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>This is math object tutorial</h1>
+
+    </div>
+    <script>
+        //printing the math object
+ let m = Math;
+ console.log(m);
+
+//  E: 2.718281828459045
+// LN2: 0.6931471805599453
+// LN10: 2.302585092994046
+// LOG2E: 1.4426950408889634
+// LOG10E: 0.4342944819032518
+// PI: 3.141592653589793
+// SQRT1_2: 0.7071067811865476
+// SQRT2: 1.4142135623730951
+ console.log("the value of math.e is ",Math.E);
+ //similarly we can do it for others like PI and all
+
+ //functions from math object
+
+ let a = 34.6446;
+ let b=89;
+
+ console.log("the value of a and b is ",a,b);
+ console.log("the value of a and b is rounded is ",Math.round(a),Math.round(b));
+
+ console.log("3 raised to the power 2 is ",Math.pow(3,2));
+ console.log("sqrt of 36 is ",Math.sqrt(36));
+
+ //ceil and floor 
+ //5.8  round up is 6 and round down is 5
+
+ //absolute value 
+ // just like modulus
+
+ //trigonometric functions
+ console.log("the value of sin(pi)",Math.sin(Math.PI));
+ 
+ // min and max
+ console.log("min value of 4,5,6 is ",Math.min(4,5,6));
+ console.log("man value of 4,5,6 is ",Math.max(4,5,6));
+
+ //generating a random number 
+ let r =Math.random(); //between 0 and 1 
+
+ // if we want random no between a and b
+ let a1 = 1;  // put whatever min. value you want 
+ let b1= 100;
+ let r1_100 = a1 + (b1-a1)*Math.random(); // function for that 
+ console.log("the random no is ",r1_100);
+
+
+    </script>
+</body>
+</html>

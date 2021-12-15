@@ -1,0 +1,19 @@
+{
+  "name": "js47",
+  "version": "1.0.0",
+  "description": "THis is the best packege ever built by siomeone",
+  "main": "JS47.js",
+  "scripts": {
+    "nodemon": "nodemon JS47.js"
+  },
+  "author": "harry",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "express": "^4.17.1",
+    "slugify": "^1.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}

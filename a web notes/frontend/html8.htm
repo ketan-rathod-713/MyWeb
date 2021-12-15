@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALIGNMENTS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+    <style>
+        . {}
+
+        body {
+            font-family: 'Ephesis', cursive;
+        }
+
+        .container {
+            width: 900px;
+            border: 3px solid brown;
+            margin: 33px auto;
+            /* first y and then x axis  */
+
+        }
+
+        .item {
+            border: 3px solid grey;
+            margin: 12px 3px;
+            padding: 12px 3px;
+            background-color: azure;
+        }
+
+        #fruits {
+            float: left;
+            width: 50%;
+        }
+
+        #stationary {
+            clear: left;
+            /* left me koi allowed nahi he so no overlapping */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="fruits" class="item">
+            <h3>Fruits</h3>
+            <p id="fruitspara" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam eligendi
+                doloremque quidem quis nam modi reiciendis quaerat cum in provident ad harum tempore delectus velit
+                illum minus, voluptate libero iusto!</p>
+        </div>
+        <div id="computer" class="item">
+            <h3>computer</h3>
+            <p id="computerpara" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam eligendi
+                doloremque quidem quis nam modi reiciendis quaerat cum in provident ad harum tempore delectus velit
+                illum minus, voluptate libero iusto!</p>
+        </div>
+        <div id="stationary" class="item">
+            <h3>stationary</h3>
+            <p id="stationarypara" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                eligendi doloremque quidem quis nam modi reiciendis quaerat cum in provident ad harum tempore delectus
+                velit illum minus, voluptate libero iusto!</p>
+        </div>
+    </div>
+</body>
+
+</html>

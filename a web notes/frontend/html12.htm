@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* position static (default ) , absolute , relative , fixed or sticky */
+        /* relatice -- top -bottom left right use , relative to its normal position and it will leave a gap at its normal posn  */
+      /* absolute -- relative to first parent(container here) and nothing more  */
+      /* static -- same that default */
+      /* fixed -- dabba vaha pe hi rahega no change while scrolling , relative to the brouser window  */
+      /* position sticky --it will stick to top or whatever be the position entered somehow like fixed but move when allowed  */
+         .container{
+             border: 2px solid rgb(241, 40, 40);
+             background-color: bisque;
+             height: 2000px;
+         }
+        .box{
+            display: inline-block;
+            /* to put in one line */
+            border: 2px solid black;
+            width: 150px;
+            height: 150px;
+            margin: 2px;
+        }
+
+        #box3{
+             /* position: absolute; */
+             /* position: fixed;
+             right: 4px; */
+             position: sticky;
+             top: 3px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3">chat with us</div>
+    <div class="box" id="box4"></div></div>
+</body>
+</html>

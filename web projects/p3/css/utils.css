@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color1:navy;
+    --color2:pink;
+}
+
+.flex{
+    display: flex;
+    justify-content:space-around ;
+}

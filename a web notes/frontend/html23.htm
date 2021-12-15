@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> css grid</title>
+    <style>
+.container{
+    display: grid;
+    /* grid-template-columns: 300px 100px 100px; */
+    /* grid-template-columns: 300px auto 100px;  */
+    /* grid-template-columns: 1fr 4fr 1fr; */
+    grid-template-columns: repeat(2,auto);
+    /* this will make 2 columns and all that */
+    /* 4fr means 4 guna */
+   
+    grid-gap: 2rem;
+
+}
+.item{
+    /* height:100px;
+    width: 100px; */
+    background-color: red;
+    /* margin: 3px; */
+    padding: 5px;
+    border: 2px solid black;
+    
+}
+    </style>
+</head>
+<body>
+    <!-- it is display property similar to flex box we can make it 2 dimensional things in rows and columns-->
+    <div class="container">
+        <!--this is grid ,table is different one not to make layout-->
+        <div class="item">this is item1</div>
+        <!-- this are grid items -->
+        <div class="item">this is item2</div>
+        <div class="item">this is item3</div>
+        <div class="item">this is item4</div>
+        <div class="item">this is item5</div>
+        <div class="item">this is item6</div>
+        <div class="item">this is item7</div>
+        <div class="item">this is item8</div>
+        <div class="item">this is item9</div>
+    </div>
+</body>
+</html>

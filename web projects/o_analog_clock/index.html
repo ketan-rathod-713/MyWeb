@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>analog clock</title>
+    <link rel="stylesheet" href="/html/projects30/analog_clock/index.css">
+    <!-- <link rel="js" href="/html/projects30/analog_clock/index.js"> -->
+</head>
+<body>
+    <div id="clockcontainer">
+        <!-- relative ke andar absolute so that we can make it relative to parent -->
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+    </div>
+
+    <script>
+        console.log("this is console");
+        setInterval(()=>{
+    d = new Date();
+    // console.log(d);
+    htime = d.getHours();
+    mtime = d.getMinutes();
+    stime = d.getSeconds();
+    
+    hrotation = 30*htime + mtime/2;
+    mrotation = 6*mtime;
+    srotation = 6*stime;
+
+    // hour = document.getElementById(hour)
+    // minute = document.getElementById(minute)
+    // second = document.getElementById(second)
+
+    hour.style.transform = `rotate(${hrotation}deg)`;
+    minute.style.transform = `rotate(${mrotation}deg)`;
+    second.style.transform = `rotate(${srotation}deg)`;
+
+    
+},1000);
+    </script>
+</body>
+</html>

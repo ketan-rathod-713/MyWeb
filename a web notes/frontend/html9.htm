@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo selector & more designing</title>
+    <style>
+        .container {
+            border: 2px solid rebeccapurple;
+            background-color: aquamarine;
+            padding: 34px;
+            margin: 34px;
+            width: 666px auto;
+        }
+       
+        .btn{
+            background-color: bisque;
+            padding: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 13px;
+            border-radius: 4px;
+        }
+
+        a:hover{
+            /* when pointer is at thaatt so what to do */
+            color: rgb(63, 162, 43);
+            background-color: burlywood;
+        }
+
+        a:visited{
+                color: chartreuse;
+        }
+
+        a:active{
+            color: black;
+            background-color: brown;
+        }
+
+        a{
+            text-decoration: none;
+            /* underline willl be removed  */
+        }
+        .btn:hover{
+            background-color: blue;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container" id="cont1">
+        <h3>this is my h</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolorum consectetur odit eius porro velit
+            voluptate totam? Deserunt porro quasi earum voluptates blanditiis rem, nemo eum? Ab fuga non alias soluta
+            nisi, facere voluptate?
+        </p>
+        <a href="https://google.com" class="btn">Read More</a>
+        <button class="btn">read more</button>
+    </div>
+</body>
+
+</html>

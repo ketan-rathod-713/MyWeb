@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JASON IN JAVASCRIPT</title>
+</head>
+<body>
+    <div class="container">
+        this is my container 
+    </div>
+    <script>
+        let jasonobj={
+            name : "harry",
+            channel : "codewithharry",
+            food : "bhindy",
+            friend : "rohan das",
+        }
+
+        console.log(jasonobj);
+        // json is a data format used to stringyfy stuff
+// if we want to transfer it via network then use json to make it string
+let myjasonstr = JSON.stringify(jasonobj);
+console.log(myjasonstr);
+
+myjasonstr = myjasonstr.replace('harry','larry');
+console.log(myjasonstr)
+
+newjasonobj = JSON.parse(myjasonstr); //now it is converted to object 
+console.log(newjasonobj);
+
+
+    </script>
+</body>
+</html>

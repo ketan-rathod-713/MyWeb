@@ -1,0 +1,18 @@
+{
+  "name": "js47-2",
+  "version": "1.0.0",
+  "description": "this is tut 69",
+  "main": "tut69.js",
+  "scripts": {
+    "nodemon": "nodemon tut69.js"
+  },
+  "author": "harry",
+  "license": "ISC",
+  "dependencies": {
+    "slugify": "^1.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
+

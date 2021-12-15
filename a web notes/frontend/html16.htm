@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color: white;
+            background-color: red;
+        }
+        /* div ke andar kahi pe bhi p hoga to use ye css lag jaegi  */
+        div p{
+            color: blue;
+            background-color: antiquewhite;
+        }
+        /* if you want to follow particular herarchy ,like apply only on direct child we use > */
+        div > p{
+            color: white;
+            background-color: black;
+        }
+
+        /* ek ese element par lagao jiska pichla sibling element div ho  ex. 3rd and 4th para */
+        div + p{
+            color: green;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>THis is on selectors </h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li>
+                    <p>this is para in li 1</p>
+                </li>
+            </ul>
+            <p> thi is para in div 2</p>
+        </div>
+        <p>this is a para 3</p>
+    </div>
+    <p>this is para 4</p>
+</body>
+</html>

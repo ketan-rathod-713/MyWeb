@@ -1,0 +1,55 @@
+//- index.pug , space is indent here ,it is smart html
+doctype html
+html
+  head
+    title Harry dance academy
+    style
+        include ../static/style.css
+  body
+    nav#navbar
+        ul
+            div#logo
+                img(src="/static/img/dance_girl2.png")
+                | HDA
+            li #[a(href="/") Home]
+            li #[a(href="/") About]
+            li #[a(href="/") Services]
+            li #[a(href="/") Class Info]
+            li #[a(href="/contact") Contact us]
+    section#introSection 
+        div Welcome to Harry's Dance Academy 
+        div.small Live Learn Dance Sleep Repeat 
+    section#missionSection 
+        h2 Our Mission 
+        div.card
+            h3 Dance Perfection 
+            div.card_box
+                div.card-img
+                    img(src="/static/img/boy_dance.jpg", alt="") 
+                div.card-content
+                    p This is the best dance academy
+        div.card
+            h3 Dance the way you like  
+            div.card_box
+                div.card-img
+                    img(src="/static/img/boy_dance.jpg", alt="") 
+                div.card-content
+                    p This is the best dance academy
+        div.card
+            h3 Expert teaching
+            div.card_box
+                div.card-img
+                    img(src="/static/img/boy_dance.jpg", alt="") 
+                div.card-content
+                    p This is the best dance academy   
+    section#sponserSection 
+        h2 Our Sponsers
+        div#sponsers 
+            img(src="/static/img/apple_logo.png", alt="",Class="spImage")
+            img(src="/static/img/skype_logo.png", alt="",Class="spImage")
+            img(src="/static/img/microsoft_logo.png", alt="",Class="spImage")
+            
+    footer#footer 
+        | Copyright © 2019 HarryDanceAcademy.com  |  All rights reserved
+    script
+      include ../static/index.js
