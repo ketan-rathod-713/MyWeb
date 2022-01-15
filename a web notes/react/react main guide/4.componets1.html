@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <!-- This are cdl links from the official react website -->
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function Welcome(props) { // the mistake here was writting in small case but here always write Welcome not welcome as it is react component and may be it is like object or something ha ha 
+            return <h1>My name is {props.name}</h1>;
+        }
+        function App() {
+            return (
+                <div>
+                    <Welcome name="sara" />
+                    <Welcome name="sara" />
+                    <Welcome name="sara" />
+                </div>
+            );
+        }
+
+        ReactDOM.render(<App />,
+            document.getElementById('root')
+        );
+    </script>
+</body>
+
+</html>

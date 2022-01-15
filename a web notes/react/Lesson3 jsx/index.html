@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <!-- This are cdl links from the official react website -->
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+</head>
+
+<body>
+
+    <div id="react-container">this is div</div>
+
+    <!-- now write the another script for react and all -->
+    <script type="text/babel">  // write this as normal browsers dont understand the meaning of esx so add babel linkk in head and then write this 
+        ReactDOM.render(
+            // this is ES6 data and the most of the browsers don't support it so we will use babel here
+            <ul>
+
+                <li>item 1</li>,
+                <li>item 2</li>,
+                <li>item 3</li>,
+            </ul>,
+            document.getElementById('react-container')
+        )  // remember proper synax for this
+    </script>
+</body>
+
+</html>

@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
 const https = require('https')
-const { options } = require('nodemon/lib/config')
+// const { options } = require('nodemon/lib/config')
 const app = express()
 
 app.use(bodyParser.urlencoded({extended:true}))
@@ -64,7 +64,7 @@ app.post("/failure",function(req,res){
 
 //9985a53f0da38d713454a6d8ef396f2e-us20
 // 49e756a683
-app.listen(3000,()=>{
+app.listen(process.env.PORT || 3000,()=>{ // if we want to work on both heroku and local 
     console.log("server is listening on port 3000 ");
 })
 

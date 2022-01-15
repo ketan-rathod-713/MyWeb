@@ -1,0 +1,24 @@
+why we use react 
+To make it single page application 
+and we don't want to write everything from scratch so that we are using it 
+so lets start
+
+npm install karte he to b=vo hamesha ke liuye install ho jata he
+
+but npx sirf ek time use hota he 
+to make react app for first time 
+
+
+if same wifi se connected he then phon me bhi reat app dekh sakte hez
+
+what is meant by single page application 
+    bcz of javascript this app is looking interative
+    sara development ham src me karege and app.js
+   ? do pages ka source code same kese he 
+    
+    
+
+
+
+
+
