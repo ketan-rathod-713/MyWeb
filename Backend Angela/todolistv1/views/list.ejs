@@ -13,10 +13,11 @@
         <h1 style="color: green;"> <%= kindofday %> </h1>
         <%  }  %>
         <ul>
-            <li>Buy food</li>
-            <li>cook the food</li>
-            <li>eat the food</li>
-            <li><%= newItem %></li>
+           
+        <%        for(var i=0;i<newListItems.length;i++){               %>
+        <li><%= newListItems[i] %></li>
+        <% } %>
+
         </ul>
         <form action="/" method="post">
             <input type="text" id="todo" name="newItem">

@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 app.set('view engine', 'ejs');  // it will looks for views folder
 app.use(bodyParser.urlencoded({extended:true}));  // it specifies that we are using body parsor soo that now we can use ha ha
-var items = [];
+var items = ["buy food","Cook food","Eat food ha ha"];
 app.get('/',(req,res)=>{
     // res.send("hello ha ha"); // response from server 
     var day ="";
@@ -16,7 +16,7 @@ app.get('/',(req,res)=>{
         month:"long"
     }
     var day = today.toLocaleDateString("en-us",options);
-   res.render("list",{kindofday:day,newItem:items});
+   res.render("list",{kindofday:day,newListItems:items});
 
 })
 
