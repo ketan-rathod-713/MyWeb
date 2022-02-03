@@ -1,13 +1,16 @@
  const express = require('express')
-
+// sjhfoaij
  const app = express();
  app.get("/about",function(req,res){
-    res.send("hello this is response asfga");
+    res.send("hello this is response asfga /about");
 })
 app.get("/",function(req,res){
-    res.send("hello this is response in about abd nidemon");
+    res.sendFile(__dirname+"/index.html");
 })
 
 // use nodemon all the time 
 
- app.listen(3000);
+ app.listen(80,function(){
+     console.log('app started this is chanmge ');
+     
+ });
