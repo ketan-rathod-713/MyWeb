@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <% if(kindofday==="weekend"){ %>
-        <h1 style="color: blue;">T<%= kindofday %> </h1>
+   <div class="maincontainer">
+    <% if(listTitle==="weekend"){ %>
+        <h1 style="color: blue;">T<%= listTitle %> </h1>
         <%  } else{ %>
-        <h1 style="color: green;"> <%= kindofday %> </h1>
+        <h1 style="color: green;"> <%= listTitle %> </h1>
         <%  }  %>
         <ul>
            
@@ -24,6 +25,7 @@
             <input type="text" id="todo" name="newItem">
             <button type="submit">click</button>
         </form>
+   </div>
   
 </body>
 </html>

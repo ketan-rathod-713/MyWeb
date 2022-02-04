@@ -7,6 +7,7 @@ app.use(bodyParser.urlencoded({extended:true}));  // it specifies that we are us
 app.use(express.static("public")); // to get static files like css and all , bcz in future we are going to deal with server so need a folder publuic in which all files a server can serve ha ha
 
 var items = ["buy food","Cook food","Eat food ha ha"];
+let workItems = [];
 app.get('/',(req,res)=>{
     // res.send("hello ha ha"); // response from server 
     var day ="";
@@ -18,20 +19,27 @@ app.get('/',(req,res)=>{
         month:"long"
     }
     var day = today.toLocaleDateString("en-us",options);
-   res.render("list",{kindofday:day,newListItems:items});
+   res.render("list",{listTitle:day,newListItems:items});
 
 })
 
 app.post("/",(req,res)=>{
    var item = req.body.newItem;
-     items.push(item)
+    items.push(item); // here we are adding new item to items ha ha
     console.log(item);
     res.redirect("/");
 
 })
 
+app.get("/work",(req,res)=>{
+    res.render("list",{listTitle:"work list",newListItems:workItems})
+})
 
-
+app.post("/work",(req,res)=>{
+    let item = req.body.newItem;
+    workItems.push(item);
+    res.redirect("/work");
+})
 app.listen(80,()=>{
     console.log('post started on 80 ha ha');
     

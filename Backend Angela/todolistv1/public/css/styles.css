@@ -2,3 +2,35 @@ h1{
     color: navy;
     background-color: greenyellow;
 }
+
+.maincontainer{
+    background-color:cadetblue;
+    border: 2px solid rgb(136, 156, 157);
+    padding: 30px;
+    min-height: 200px;
+    width: 400px;
+}
+
+li{
+    color: white;
+    width: inherit;
+    height: fit-content;
+}
+form{
+    display: block;
+}
+body{
+    display: flex;
+    align-items: center;
+}
+
+input{
+    width: 100%;
+    display: block;
+}
+
+button{
+    width: 50px;
+    height: 2rem;
+}
+
