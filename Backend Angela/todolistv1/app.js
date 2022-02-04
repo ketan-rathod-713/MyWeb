@@ -1,6 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
- 
+const date = require(__dirname+"/date.js"); 
+
+// console.log(date());
+
 const app = express();
 app.set('view engine', 'ejs');  // it will looks for views folder
 app.use(bodyParser.urlencoded({extended:true}));  // it specifies that we are using body parsor soo that now we can use ha ha
@@ -10,15 +13,8 @@ var items = ["buy food","Cook food","Eat food ha ha"];
 let workItems = [];
 app.get('/',(req,res)=>{
     // res.send("hello ha ha"); // response from server 
-    var day ="";
-    var today = new Date();
-   
-    var options ={
-        weekday:"long",
-        day:"numeric",
-        month:"long"
-    }
-    var day = today.toLocaleDateString("en-us",options);
+    // var day ="";
+   let day = date.getDate();
    res.render("list",{listTitle:day,newListItems:items});
 
 })
