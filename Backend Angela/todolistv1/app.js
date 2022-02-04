@@ -50,6 +50,12 @@ app.post("/work",(req,res)=>{
     
     res.redirect("/work");
 })
+
+
+app.get("/about",(req,res)=>{
+    res.render("about");
+})
+
 app.listen(80,()=>{
     console.log('post started on 80 ha ha');
     
