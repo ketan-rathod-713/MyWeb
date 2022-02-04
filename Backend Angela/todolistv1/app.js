@@ -25,10 +25,18 @@ app.get('/',(req,res)=>{
 
 app.post("/",(req,res)=>{
    var item = req.body.newItem;
-    items.push(item); // here we are adding new item to items ha ha
-    console.log(item);
+   console.log(req.body);
+   if(req.body.list=="work"){
+       workItems.push(item);
+       res.redirect("/work")
+   } else{ items.push(item); // here we are adding new item to items ha ha
+
     res.redirect("/");
 
+}
+    items.push(item); // here we are adding new item to items ha ha
+    console.log(item);
+   
 })
 
 app.get("/work",(req,res)=>{
@@ -38,6 +46,8 @@ app.get("/work",(req,res)=>{
 app.post("/work",(req,res)=>{
     let item = req.body.newItem;
     workItems.push(item);
+    console.log(req.body);
+    
     res.redirect("/work");
 })
 app.listen(80,()=>{
