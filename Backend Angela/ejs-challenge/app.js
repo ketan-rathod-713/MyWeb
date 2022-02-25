@@ -21,7 +21,7 @@ app.get("/",(req,res)=>{
   res.render("home",{part1:homeStartingContent});
 })
 app.get("/about",(req,res)=>{
-  res.render("about",{part1:aboutContent});
+  res.render("about",{part1:aboutContent}); // key should be same in both ejs and app.js :)
 })
 app.get("/contact",(req,res)=>{
   res.render("contact",{part1:contactContent});
