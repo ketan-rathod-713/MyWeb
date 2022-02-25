@@ -1,5 +1,5 @@
 ** what to do in this project 
-It is a simple not making app for daily life scenarios 
+It is a simple note making app for daily life scenarios 
 
 Made basic template 
 Now want to add more features in it 
