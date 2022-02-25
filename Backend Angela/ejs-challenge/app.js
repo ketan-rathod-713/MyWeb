@@ -17,10 +17,16 @@ app.use(express.static("public"));     // static files in punblic
 
 
 app.get("/",(req,res)=>{
-  console.log(__dirname);
   // res.render(__dirname+"/views/home.ejs");
   res.render("home",{part1:homeStartingContent});
 })
+app.get("/about",(req,res)=>{
+  res.render("about",{part1:aboutContent});
+})
+app.get("/contact",(req,res)=>{
+  res.render("contact",{part1:contactContent});
+})
+
 
 
 
