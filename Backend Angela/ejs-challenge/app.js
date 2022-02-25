@@ -33,6 +33,18 @@ app.get("/compose",(req,res)=>{
   res.render("compose");
 })
 
+app.get("/posts/:id",(req,res)=>{
+  console.log(req.params.id);
+  
+  posts.forEach(function(post){
+    if(req.params.id==post.title)
+  console.log("match found ha ha")
+  else
+  console.log('match not found !');
+  })
+  
+})
+
 app.post("/compose",(req,res)=>{
   const post ={
     title:req.body.postTitle,

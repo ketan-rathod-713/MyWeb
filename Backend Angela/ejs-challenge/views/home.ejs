@@ -3,10 +3,11 @@
 <p>
 <%=  part1 %>
 </p>
-<p>   
-    <% for(i=0;i<part2.length;i++){ %>
-    <% console.log(part2[i].title) %>
-    <% } %>
-</p>
+  
+    <% part2.forEach(function(post){ %>
+     <h1><%=post.title%></h1>
+     <p><%=post.content%></p>
+    <% }); %>
+
 
 <%- include('partials/footer') -%>
