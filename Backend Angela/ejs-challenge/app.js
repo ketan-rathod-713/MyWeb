@@ -26,6 +26,14 @@ app.get("/about",(req,res)=>{
 app.get("/contact",(req,res)=>{
   res.render("contact",{part1:contactContent});
 })
+app.get("/compose",(req,res)=>{
+  res.render("compose");
+})
+
+app.post("/compose",(req,res)=>{
+  console.log(req.body.postTitle);
+  res.redirect("/compose");
+})
 
 
 
