@@ -40,8 +40,8 @@ app.get("/compose",(req,res)=>{
   res.render("compose");
 })
 
-app.get("/posts/:id",(req,res)=>{  // jab koi post ko lena chahega then what to do 
-  // console.log(req.params.id);  
+app.get("/posts/:id",(req,res)=>{  // jab koi post ko lena chahega then what to do , we are making this route randomly for our good 
+  console.log(req.params.id);  
   let title,content,flag=0;
   const requestedTitle = _.lowerCase(req.params.id);
   posts.forEach(function(post){
