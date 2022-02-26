@@ -40,13 +40,16 @@ app.get("/compose",(req,res)=>{
   res.render("compose");
 })
 
-app.get("/posts/:id",(req,res)=>{
+app.get("/posts/:id",(req,res)=>{  // jab koi post ko lena chahega then what to do 
   // console.log(req.params.id);  
+  let title,content,flag=0;
   const requestedTitle = _.lowerCase(req.params.id);
   posts.forEach(function(post){
     const storedTitle = _.lowerCase(post.title);
-    if(requestedTitle==storedTitle)
-  console.log("match found ha ha")
+    if(requestedTitle==storedTitle){
+      console.log("match found ha ha");
+      res.render("post",{title:post.title,content:post.content})
+    }
   else
   console.log('match not found !');
   })
