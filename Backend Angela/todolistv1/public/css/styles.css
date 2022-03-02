@@ -27,8 +27,11 @@ body{
 
 input{
     width: 100%;
-    display: block;
+    display: flex;
+    align-items: center;
 }
+
+
 
 button{
     width: 50px;
@@ -38,4 +41,6 @@ button{
 p{
     color: rgb(47, 106, 5);
 }
-
+.item{
+    background-color: wheat;
+}
