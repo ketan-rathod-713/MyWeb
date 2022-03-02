@@ -28,7 +28,7 @@ const fruit = new Fruit({
     rating: 4, // if rating more than allowed then error 
     review:"pretty solid as a fruit"
 });  // it will make a document out of the model of Fruit and then 4
-fruit.save(); 
+// fruit.save(); 
 // it will be saved to the database by this method
 // it will save the same thing all the time 
 // check values in terminal by mongo and going to fruits collection in fruitDB database 
@@ -56,6 +56,25 @@ fruit.save();
     
 // })
 
+// To update 
+// Fruit.updateOne({ "_id" :"621f1034c0af64a5fbd6939f"},{name:"peaches"},function(err){
+//     if(err) console.log(err);
+//     else{
+//         console.log('sucessfully updated');
+        
+//     }
+    
+// })
+
+// Now delete that One
+Fruit.deleteOne({name :"apple"},function(err){
+    if(err) console.log(err);
+    else
+    console.log('Successfully deleted ');
+    
+    
+})
+
 // to find the fruit 
 Fruit.find(function(err,fruits) {
     if(err)
@@ -70,4 +89,5 @@ Fruit.find(function(err,fruits) {
         
     }
     
+
 }) // from this we will get the array of objects(documents here)
