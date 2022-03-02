@@ -6,8 +6,15 @@ mongoose.connect("mongodb://localhost:27017/fruitsDB")
 //create a new schema , structure 
 
 const fruitsSchema = new mongoose.Schema({
-    name: String,
-    rating:Number,
+    name: {
+        type:String,
+        required:[true,"Required product Name"]
+    },
+    rating:{
+        type:Number,
+        min:1,
+        max:10
+    },
     review:String
 });
 
@@ -17,26 +24,26 @@ const Fruit = mongoose.model("Fruit",fruitsSchema); // it will make a new collec
 // what if i dont metion schema ?
 
 const fruit = new Fruit({ 
-    name:"apple",
-    rating: 7,
+    // name:"a",
+    rating: 4, // if rating more than allowed then error 
     review:"pretty solid as a fruit"
 });  // it will make a document out of the model of Fruit and then 4
-// fruit.save(); 
+fruit.save(); 
 // it will be saved to the database by this method
 // it will save the same thing all the time 
 // check values in terminal by mongo and going to fruits collection in fruitDB database 
 
 
-const orange = new Fruit({
-    name:"Orange",
-    rating:10,
-    review:"this is orange"
-})
-const kiwi = new Fruit({
-    name:"kiwi",
-    rating:10,
-    review:"this is orange"
-})
+// const orange = new Fruit({
+//     name:"Orange",
+//     rating:10,
+//     review:"this is orange"
+// })
+// const kiwi = new Fruit({
+//     name:"kiwi",
+//     rating:10,
+//     review:"this is orange"
+// })
 
 // now to save all 
 // 
@@ -49,6 +56,7 @@ const kiwi = new Fruit({
     
 // })
 
+// to find the fruit 
 Fruit.find(function(err,fruits) {
     if(err)
     console.log(err);
