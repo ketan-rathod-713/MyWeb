@@ -11,6 +11,7 @@ Just few days ago I learned Bootstrap and amazed by it's features and made this 
 So Currently I am working on MyPersonal Blog Project which part of Angela yu's challenges..and I think it will not take too much time so if you have any project idea that a begineer nodejs develo[er
 should do then suggestions are welcomed ..so let me start making this and ya atlast I want to experience how hosting looks like ha ha:)
 <br><br>
-## PersonalBlogProject
-Exam is coming so postponing it in march heeee.
-
+#
+ made the notes app which is live on heroku , but here I haven't added authentication so everyone can see each other's Notes and it's kind of not good for real world situation. Styling is minimal as I just want to tryout how to deploy :))...
+[Notes App](https://pacific-harbor-40136.herokuapp.com/)
+<!-- TO change that code clone that and then make changes and re push it to heroku -->
