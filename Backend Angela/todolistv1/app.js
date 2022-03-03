@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 // console.log(date());
 
-mongoose.connect("mongodb://localhost:27017/todolistdb", {
+mongoose.connect("mongodb+srv://admin-ketan:Ketan@cluster0.odeen.mongodb.net/todolistdb", {
   useNewUrlParser: true,
 });
 
