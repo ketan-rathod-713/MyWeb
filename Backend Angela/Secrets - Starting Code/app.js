@@ -1,4 +1,6 @@
-
+require('dotenv').config();
+console.log(process.env.SECRET) // remove this after you've confirmed it working
+// put it as top as we require variable to be accessed from anywhere 
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
@@ -17,9 +19,9 @@ const userSchema = new mongoose.Schema({
     password:String
 });
 
-const secret = "Thisisourlittlesecret.";
+// const secret = "Thisisourlittlesecret.";
 
-userSchema.plugin(encrypt, { secret: secret ,encryptedFields: ['password']});
+userSchema.plugin(encrypt, { secret: process.env.SECRET ,encryptedFields: ['password']});
 // we have to make this plugin before model , read plugins in mongoose 
 const User = mongoose.model("user",userSchema);
 // whenever we find and save mongoose decrypt and encrypt accordingly
