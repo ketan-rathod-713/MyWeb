@@ -1,0 +1,37 @@
+<%- include("partials/header")-%>
+<h1 style="margin-top: 10px;"> <span class="badge bg-secondary">Top Headlines</span></h1> 
+
+<div style="padding:10px;">
+    <form method="post" action="/news2" style="display:flex;">
+        <%if(previouspage){%>
+        <button class="btn btn-secondary" name="button" value="<%=previouspage%>" style="margin:50px 50px 30px 20px">PreviousPage</button>
+        <%}%>
+        <%if(nextpage){%>
+        <button class="btn btn-secondary" name="button" value="<%=nextpage%>" style="margin:50px 20px 30px 50px">NextPage</button>
+        <%}%>
+      </form>
+<% news.forEach(function(post){ %>
+   <div class="col-sm-6" style="margin-top:10px;">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= post.title%></h5> <h6> <span class="badge bg-secondary"><%= post.created_at %></span></h6>
+        <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+        <a href="<%= post.url%>" class="btn btn-primary">Know more</a>
+      </div>
+    </div>
+  </div>
+   <% }); %>
+   <form method="post" action="/news2" style="display:flex;">
+    <%if(previouspage){%>
+    <button class="btn btn-secondary" name="button" value="<%=previouspage%>" style="margin:50px 50px 30px 20px">Previous</button>
+    <%}%>
+    <%if(nextpage){%>
+    <button class="btn btn-secondary" name="button" value="<%=nextpage%>" style="margin:50px 20px 30px 50px">Next</button>
+    <%}%>
+  </form>
+</div>
+
+<!-- 
+  <h6><%=nextpage%></h6>
+  <h6><%=previouspage%></h6> -->
+<%- include("partials/footer")-%>

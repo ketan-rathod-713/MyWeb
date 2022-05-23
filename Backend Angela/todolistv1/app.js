@@ -6,9 +6,9 @@ const mongoose = require("mongoose");
 
 mongoose.connect("mongodb+srv://admin-ketan:Ketan@cluster0.odeen.mongodb.net/todolistdb", {
   useNewUrlParser: true,
-});
+}); // Just revise how to do it online ha ha
 
-// now make schema
+// now make schema 
 const itemSchema = {
   name: String,
 };

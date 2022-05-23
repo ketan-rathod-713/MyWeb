@@ -1,6 +1,6 @@
 // make calculator on server
 const express = require('express');
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser'); //for using texfield may be checkOut
 const app = express();
 
 app.use(bodyParser.urlencoded({extended:true}));  // to get info from post 
@@ -25,7 +25,8 @@ app.get("/bmicalculator",function(req,res){
 })
 
 app.post("/bmicalculator",function(req,res){
-    var w = parseFloat(req.body.weight)
+    var w = parseFloat(req.body.weight) // to parse value in float as we get it as 
+// string may be 
     var h = parseFloat(req.body.height)
     var bmi = w/(h*h);
     res.send("the bmi is "+ bmi)

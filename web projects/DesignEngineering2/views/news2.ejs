@@ -1,0 +1,35 @@
+<%- include("partials/header")-%>
+<div class="main" style="display:flex;flex-direction: column;">
+
+<h1 style="margin-top: 10px;"> <span class="badge bg-secondary">Recent news</span></h1> 
+
+<div style="display:flex;flex-wrap: wrap;justify-content:center;">
+<% news.forEach(function(post){ %>
+   
+
+   <div class="card mb-3" style="width: 450px;display: inline-block;margin: 5px;">
+    <%if(post.urlToImage){%>
+    <img src="<%=post.urlToImage%>" class="card-img-top" alt="..." height="200px" style="object-fit: cover;">
+    <%}%>
+    <div class="card-body">
+      <div style="height: 200px;">
+        <h5  class="card-title"><%=post.title%></h5>
+        <p style="overflow: hidden;" class="card-text"><%=post.content%></p>
+      </div>
+      <div style="display:flex;justify-content: space-between; height: 20px;">
+      <%if(post.author){%>
+      <span style="margin-bottom:5px;margin-right: 30px;"><b> by : <%=post.author %></b></span>
+      <%}else{%>
+      <span style="margin-bottom:5px;margin-right: 30px;"><b> by : Unknown</b></span>
+      <%}%>
+      <span><%=post.publishedAt%></span>
+    </div>
+      <div style="display:flex;justify-content:flex-end;"><button type="button" class="btn btn-secondary" style="margin-top: 10px;"><a href="<%=post.url%>" style="color: white;">More..</a></button></div>
+    </div>
+  </div>
+   <% }); %>
+</div>
+
+</div>
+
+<%- include("partials/footer")-%>

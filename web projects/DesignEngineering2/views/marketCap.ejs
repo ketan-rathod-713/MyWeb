@@ -1,0 +1,43 @@
+
+<%- include("partials/header")-%>
+
+
+
+<div style="background-color:rgb(253, 234, 199) ;">
+  <h2 style="text-align:center;padding-top: 50px;">Market Cap </h2>
+<div style="display: flex;align-items: center;justify-content: center;padding: 30px 200px;">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <!-- <th scope="col">name</th> -->
+            <th scope="col">  COIN SYMBOL</th>
+            <th scope="col">VALUE</th>
+          </tr>
+        </thead>
+
+        <!-- add loop here ha ha -->
+        <tbody>
+          <!-- <tr>
+            <th scope="row">1</th>
+            <td>Bitcoin</td>
+            <td>BTC</td>
+            <td>2202020$</td>
+          </tr> -->
+          <% let i=1 %>
+          <%coins.forEach(function(coin){ %>
+            <tr>
+                <th scope="row"><%=i++%></th>
+                <!-- <td><%=coin.name%></td> -->
+                <td><%=coin.symbol%></td>
+                <td><%=coin.value%>$</td>
+            </tr>
+            <%})%>
+        
+          
+        </tbody>
+      </table>
+</div>
+</div>
+
+<%- include("partials/footer")-%>

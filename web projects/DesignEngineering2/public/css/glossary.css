@@ -1,0 +1,26 @@
+.glossaryHeading{
+    background-color: lightblue;
+    color: navy;
+    height: 100px;
+    width: 80%;
+    padding: 20px 40px;
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.glossaryItems{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.glossaryItem{
+    width: 600px;
+    /* background-color: yellow; */
+    margin: 30px;
+    padding: 20px;
+    display: block;
+}
+

@@ -30,7 +30,7 @@ app.post("/",(req,res)=>{
         ]
     }
 
-var jsonData = JSON.stringify(data);
+var jsonData = JSON.stringify(data);  // Now here we only need to use the reverse technique only ha ha
 
 // previously we used http request and inside that on method but here we want to post data to the external user
 const url = "https://us20.api.mailchimp.com/3.0/lists/49e756a683" 

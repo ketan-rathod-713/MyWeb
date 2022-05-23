@@ -1,0 +1,10 @@
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: cadetblue;
+}
+nav p{
+    font-weight: bold;
+    color: navy;   
+}

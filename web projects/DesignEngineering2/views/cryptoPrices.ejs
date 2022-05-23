@@ -1,0 +1,22 @@
+<div style="display:flex;overflow-x: scroll;position: relative;z-index: 1;">
+
+    <% part2.forEach(function(post){ %>
+          
+        <div class="col" style="max-width: 200px;margin: 10px;">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal"><%=post.name%></h4>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title pricing-card-title"><%=post.value%><small class="text-muted fw-light">$</small></h5>
+                
+                
+              </div>
+            </div>
+          </div>
+       <% }); %>
+
+
+
+
+</div>

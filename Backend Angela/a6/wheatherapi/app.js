@@ -1,5 +1,4 @@
-const { json } = require('body-parser');
-const { response } = require('express');
+
 const bodyParser = require('body-parser')
 const express = require('express');
 const https = require('https');
@@ -19,14 +18,18 @@ app.post("/",function(req,res){
     const query = "London"
     const apikey = "62042c9f43a0a2dc779353be172229a6";
     const unit = "metric";
+
+// depend upon the doc to doc
     const url  = "https://api.openweathermap.org/data/2.5/weather?q="+query+",uk&appid="+apikey;
-        https.get(url,function(response){  // for no confusion between res we used response 
+
+        https.get(url,function(response){  // for no confusion between res we used response // inside the post or whenever we want to call it depends on us .. 
             
           
             response.on("data",function(data){  // when we recieve some data , why its not printed , i should be getting hexadecimal 
                 const wheatherData = JSON.parse(data);   // it will convert hexadecimal into one js object 
                
- console.log("rhis ");
+                console.log('Inside the response event of api');
+                
                 const temp  = wheatherData.main.temp
                 const desc = wheatherData.weather[0].description
                 const icon = wheatherData.weather[0].icon
@@ -35,7 +38,7 @@ app.post("/",function(req,res){
         res.write("<h1> The wheather is currently "+ desc )  // we can have lots of write 
         // res.write("<h1>the temp in london is " + temp+" and </h1>")
         res.write("<img src="+iconurl+">")  // i domt know why this is not working and below onw is working , ohh now its working so this is thw good way to write this 
-        res.send()  // we can have only one res.send but write as many times as can 
+        res.send();  // we can have only one res.send but write as many times as can 
         
                })
         })

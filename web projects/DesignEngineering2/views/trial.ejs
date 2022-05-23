@@ -1,0 +1,11 @@
+<%- include("partials/header")-%>
+
+<% part2.forEach(function(post){ %>
+    <div style="background-color: blue;display: inline-block;">
+        <h2><%=post.symbol%></h2>
+        <h1><%=post.value%></h1>
+    </div>
+   <% }); %>
+
+
+<%- include("partials/footer")-%>

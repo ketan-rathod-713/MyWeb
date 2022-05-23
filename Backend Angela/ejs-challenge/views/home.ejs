@@ -4,7 +4,8 @@
 <%=  part1 %>
 </p>
   
-    <% part2.forEach(function(post){ %>
+    <% part2.forEach(function(post){ %> 
+        <!-- here we can use any name like post , p etc.. but key part2 must be same -->
      <h1><%=post.title%></h1>
      <p> <%= post.content.substring(0, 100) + "..."  %> <a href="/posts/<%=post.title%>">Read More</a> </p>  
      <!-- just set the link for that page ha ha -->

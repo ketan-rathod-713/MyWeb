@@ -1,0 +1,32 @@
+{
+  "name": "designengineering2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "body": "^5.1.0",
+    "body-parser": "^1.20.0",
+    "coingecko-api": "^1.0.10",
+    "ejs": "^3.1.8",
+    "es": "^0.8.0",
+    "event-stream": "^4.0.1",
+    "express": "^4.18.1",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "https": "^1.0.0",
+    "jsonstream": "^1.0.3",
+    "JSONStream": "^1.3.5",
+    "node-fetch": "2.0",
+    "nodemon": "^2.0.16",
+    "parser": "^0.1.4",
+    "request": "^2.88.2",
+    "stream": "^0.0.2"
+  }
+}

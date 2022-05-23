@@ -1,0 +1,35 @@
+.youtubeCourses{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.youtubeCourse{
+    margin: 30px 0;
+}
+*{
+ box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+}
+.headerNav{
+    position: sticky;
+    top: 0;
+    background-color: #053b6c!important;
+    /* position:relative; */
+    z-index: 2;
+    color: white;
+}
+
+.normalText{
+    opacity: .9;
+    color: white;
+}
+
+/* @media screen and (min-width: 480px) {
+    body {
+        background-color: lightgreen;
+    }
+} */
+/* do several changes for the responsive site  */
