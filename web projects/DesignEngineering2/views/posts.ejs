@@ -1,0 +1,14 @@
+
+<div style="display:flex ;flex-wrap: wrap;">
+<%posts.forEach(function(post){ %>
+         
+      <div class="container" style="background-color: wheat; width:400px;margin: 40px; padding: 20px;">
+        <h1><%=post.title%></h1>
+        <h2><%=post.description%></h2>
+        
+        <a href="/posts/<%=post.serialno%>">Click here to know more</a>
+        <!-- wow it is really fantastic I can upload as much as good posts as i can ha ha once I edited at all -->
+ 
+      </div>
+    <%})%>
+</div>

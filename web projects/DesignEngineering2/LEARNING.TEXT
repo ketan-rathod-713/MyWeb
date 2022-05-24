@@ -1,0 +1,26 @@
+app.get("/trial", async (req, res) => {
+  
+    const url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=168a5633e60e48caa97a7bd024717425";
+
+    https.get(url, function (response) {
+        response.on("data",async function (data) {
+          var arr2 = [];
+          const mydata =await JSON.parse(data);
+          console.log(mydata.BTC);
+          const keys = Object.keys(mydata);
+          // print all keys
+          console.log(keys);
+          // iterate over object
+          keys.forEach((key, index) => {
+            console.log(`${key}: ${mydata[key].USD}`);
+            // arr.push({name:"waht",symbol:key,value:`${mydata[key].USD}`});
+          });
+        });
+      });
+      
+setTimeout(function() {            // this time i solve a little but getting results ha ha :)
+    console.log("first function executed");
+    res.render("trial", { part2: arr });
+  }, 2000); 
+});
+
