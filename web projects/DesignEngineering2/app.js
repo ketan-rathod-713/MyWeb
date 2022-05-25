@@ -12,37 +12,26 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-    var cryotoPrices = [{name:"BTC",value:2001}];
-//   to get the cryptoPrices redirect to the cryotoPrices and return back ha ha fast can i do that
-  // const url ="https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,BUSD,SQL,BNB,XRP,TRX,SOL,ATOM,USDC,ADA,DOT,KNC,FTM,MATIC,LTC,SHIB,NEAR,SAND,XMP&tsyms=USD&api_key=c0686da4f1c5e7913524ca03adbd259e6e3392de2745292768dddbdefe556963"  ;
-       
-  //     https.get(url,function(response){  // for no confusion between res we used response // inside the post or whenever we want to call it depends on us ..
+  let arr = [{name:"bitcciga",symbol:"BTC",value:2481236}];
+  const url ="https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,BUSD,SQL,BNB,XRP,TRX,SOL,ATOM,USDC,ADA,DOT,KNC,FTM,MATIC,LTC,SHIB,NEAR,SAND,XMP&tsyms=USD&api_key=c0686da4f1c5e7913524ca03adbd259e6e3392de2745292768dddbdefe556963";
 
-  //     response.on("data",function(data){  // when we recieve some data , why its not printed , i should be getting hexadecimal
-  //         const mydata = JSON.parse(data);   // it will convert hexadecimal into one js object
-  //         console.log(mydata);
+  https.get(url, function (response) {
+    response.on("data",async function (data) {
+      var arr2 = [];
+      const mydata =await JSON.parse(data);
+      console.log(mydata.BTC);
+      const keys = Object.keys(mydata);// print all keys console.log(keys);
 
-  //         const keys = Object.keys(mydata);
-  //       // print all keys
-  //       console.log(keys);
-  //       // iterate over object
-  //       keys.forEach((key, index) => {
-  //         console.log(`${key}: ${mydata[key].USD}`);
-  //         cryotoPrices.push({name:key,value:`${mydata[key].USD}`});
-  //       });
-          // do not push each time ha ha or delete previous one if
-          
-                  // })
-  // })
-
-
-  // Another api step 2 ha ha 
-  
-
+      keys.forEach((key, index) => {   // iterate over object
+        console.log(`${key}: ${mydata[key].USD}`);
+        arr.push({name:"waht",symbol:key,value:`${mydata[key].USD}`});
+      });
+    });
+  });
 
   setTimeout(function() {            // this time i solve a little but getting results ha ha :)
     console.log("first function executed");
-    res.render("home", { part2: cryotoPrices });
+    res.render("home", { part2: arr });
   }, 3000);
  
 });

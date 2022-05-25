@@ -5,3 +5,5 @@ youtube couses = use api of youtube and show the title and is it possible like t
 learning section - find api for learning cryptocurrency
 email - stored email now how can i send same message to all of my newsletter subscribers
 Implemented the basic posts and how it works , Now How can i delete , update a post from specific route ha ha with confirmation do that 
+
+add animation in frontPage for the headline movement 

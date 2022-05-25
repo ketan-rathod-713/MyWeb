@@ -1,13 +1,15 @@
-<div style="display:flex;overflow-x: scroll;position: relative;z-index: 1;">
+<div style="display:flex;overflow-x: scroll;position: relative;z-index: 1;" id="cryptoPricesMain">
 
     <% part2.forEach(function(post){ %>
           
         <div class="col" style="max-width: 200px;margin: 10px;">
-            <div class="card mb-4 rounded-3 shadow-sm">
-              <div class="card-header py-3">
-                <h4 class="my-0 fw-normal"><%=post.name%></h4>
+            <div class="card rounded-3 shadow-sm" >
+              <div class="card-header py-3" style="height:40px;display: flex;align-items: center;">
+                <h4 class="my-0 fw-normal"><%=post.symbol%></h4>
               </div>
-              <div class="card-body">
+              <div class="card-body" style="    height: 50px;
+              display: flex;
+              align-items: center;">
                 <h5 class="card-title pricing-card-title"><%=post.value%><small class="text-muted fw-light">$</small></h5>
                 
                 
@@ -16,7 +18,11 @@
           </div>
        <% }); %>
 
-
-
-
 </div>
+
+
+<script>
+const cryptoPrices = document.getElementById("cryptoPricesMain");
+console.log(cryptoPrices.innerHTML);
+
+</script>
