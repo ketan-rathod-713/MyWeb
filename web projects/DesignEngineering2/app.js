@@ -9,7 +9,7 @@ const axios = require("axios");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
-app.use(express.static("public"));
+// app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   let arr = [{name:"bitcciga",symbol:"BTC",value:2481236}];
@@ -116,12 +116,13 @@ res.render('news2',{news:arr});
 
 app.get('/news/:topic', (req, res) => {
 //  whatever topic comes in I have to serve this LIKE BITCOIN , ETHERIUM ETC.
+
 })
 
 
 // FEATURE 
 app.get("/compose",(req,res)=>{
-  res.render("compose");
+  res.render("compose");           // make a good compose such that I can make a good posts ha ha
 })
 var i = 3; // FOR SERIAL NO
 app.post("/compose",(req,res)=>{
@@ -150,6 +151,9 @@ app.get("/posts/:p",(req,res)=>{
 app.get("/posts",(req,res)=>{
   res.render("posts",{posts:postArr});
 })
+
+// For good data visulizations 
+// https://observablehq.com/@observablehq/observable-overview-video?collection=@observablehq/observable-demos
 
 //  Now I want to add file and then let me show it ha ha
 const multer = require("multer") // It is the middle ware that is used to implement the file related stuiff upload and all that 

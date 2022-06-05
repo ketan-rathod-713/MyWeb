@@ -7,3 +7,11 @@ email - stored email now how can i send same message to all of my newsletter sub
 Implemented the basic posts and how it works , Now How can i delete , update a post from specific route ha ha with confirmation do that 
 
 add animation in frontPage for the headline movement 
+
+
+
+One another Project Idea 
+Restorant web 
+scan qr
+add items purchased and it will show total amount done 
+and then give options of paytm and netbanking like features think about it atleast ha ha
