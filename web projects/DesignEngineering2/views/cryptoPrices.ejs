@@ -1,4 +1,7 @@
-<div style="display:flex;overflow-x: scroll;position: relative;z-index: 1;" id="cryptoPricesMain">
+<div style="display:flex;
+/* overflow-x: scroll; */
+overflow-x: hidden;
+position: relative;z-index: 1; " class="animation" id="cryptoPricesMain">
 
     <% part2.forEach(function(post){ %>
           
@@ -20,9 +23,54 @@
 
 </div>
 
+<style>
+/*  Add animation  */
 
+.animation{
+  /* animation-name: move; */
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation-fill-mode:backwards;
+  /* animation-direction: alternate-reverse; */
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes move {
+  from{
+    /* margin-left: 100vw;  */
+    padding-left: 90vw;
+  } to{
+    padding-left: -700px;
+    padding-right: 90vw;
+  }
+}
+
+
+  /* width */
+  ::-webkit-scrollbar {
+    height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+  </style>
 <script>
-const cryptoPrices = document.getElementById("cryptoPricesMain");
-console.log(cryptoPrices.innerHTML);
+// const cryptoPrices = document.getElementById("cryptoPricesMain");
+// console.log(cryptoPrices.innerHTML);
 
 </script>
