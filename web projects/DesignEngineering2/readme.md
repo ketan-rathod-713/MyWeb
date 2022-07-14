@@ -8,13 +8,4 @@ Implemented the basic posts and how it works , Now How can i delete , update a p
 
 add animation in frontPage for the headline movement 
 
-
-
-One another Project Idea 
-Restorant web 
-scan qr
-add items purchased and it will show total amount done 
-and then give options of paytm and netbanking like features think about it atleast ha ha
-
-
 add visual effects for chart using historial data from cryptocompare api or another see the others and try to implement it .
