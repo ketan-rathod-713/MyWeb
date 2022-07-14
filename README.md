@@ -11,4 +11,3 @@ I have started my journey in web-development from july-aug 2020 and currently I 
 For This ==> html,css,javascript,nodejs(& express),ejs templating,mongoDB and atlast heroku
 <!-- TO change that code clone that and then make changes and re push it to heroku -->
 #
-
